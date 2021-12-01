@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/USER/AndroidStudioProjects/BMICalculatorNew/app/src/main/res/layout/activity_main.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/BMICalculatorNew/app/src/main/res/drawable/calbutton.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/BMICalculatorNew/app/src/main/res/drawable/cardbackground.xml" value="1.0464285714285715" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/BMICalculatorNew/app/src/main/res/drawable/malefemalefocuse.xml" value="0.19282051282051282" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/BMICalculatorNew/app/src/main/res/drawable/malefemalenotfocus.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/BMICalculatorNew/app/src/main/res/drawable/plus_minus.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/BMICalculatorNew/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>
