@@ -9,4 +9,8 @@
     <string name="_20">20</string>
     <string name="age">Age</string>
     <string name="bmi_calculator">BMI CALCULATOR</string>
+    <string name="_22">22</string>
+    <string name="gender">Gender</string>
+    <string name="re_calculate_your_bmi">Re-Calculate Your BMI</string>
+    <string name="your_bmi_category_is">Your BMI Category Is</string>
 </resources>
