@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,12 +68,102 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //seekbar set the max value
+        mseekbarForHeight.setMax(300);
+        mseekbarForHeight.setProgress(170);
 
-        ccalBmi.setOnClickListener(new View.OnClickListener() {
+        mseekbarForHeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                currentprogress = i;
+                mintprogress = String.valueOf(currentprogress);
+                mcurrentHeight.setText(mintprogress);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mincrementAge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,BMI_Activity.class);
-                startActivity(intent);
+                intAge = intAge +1;
+                age2 = String.valueOf(intAge);
+                mcurrentAge.setText(age2);
+
+            }
+        });
+
+        mdecrementAge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intAge = intAge - 1;
+                age2 = String.valueOf(intAge);
+                mcurrentAge.setText(age2);
+            }
+        });
+
+
+        mincrementWeight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intWeight = intWeight +1;
+                weight2 = String.valueOf(intWeight);
+                mcurrentWeight.setText(weight2);
+            }
+        });
+
+        mdecrementWeight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intWeight = intWeight - 1;
+                weight2 = String.valueOf(intWeight);
+                mcurrentWeight.setText(weight2);
+            }
+        });
+
+
+
+
+
+        ccalBmi.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                if(typeofUser.equals("0")){
+                    Toast.makeText(getApplicationContext(), "Select Your Gender First", Toast.LENGTH_SHORT).show();
+                }
+                else if(mintprogress.equals("0")){
+                    Toast.makeText(getApplicationContext(), "Select Your Height First", Toast.LENGTH_SHORT).show();
+                }
+                else if(intAge==0 || intAge<0){
+                    Toast.makeText(getApplicationContext(), "Your Age Is Invalid", Toast.LENGTH_SHORT).show();
+                }
+                else if(intWeight == 0 || intWeight<0){
+                    Toast.makeText(getApplicationContext(), "Your Weight Is Invalid", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Intent intent = new Intent(MainActivity.this,BMI_Activity.class);
+
+                    //pass the data
+                    intent.putExtra("gender",typeofUser);
+                    intent.putExtra("height",mintprogress);
+                    intent.putExtra("weight",weight2);
+                    intent.putExtra("age",age2);
+
+                    startActivity(intent);
+
+                }
+
+
             }
         });
     }

@@ -11,11 +11,11 @@
         android:id="@+id/ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ok"
-        android:layout_centerHorizontal="true"
-        android:padding="10dp"
         android:layout_above="@+id/detail"
-        android:layout_marginBottom="30dp">
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        android:src="@drawable/ok">
 
     </ImageView>
 
@@ -28,7 +28,7 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/bmi"
+            android:id="@+id/bmiDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -37,13 +37,15 @@
             android:text="@string/_22"
             android:textColor="@color/white"
             android:textSize="45sp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold">
+
+        </TextView>
 
         <TextView
             android:id="@+id/genderDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/bmi"
+            android:layout_below="@+id/bmiDisplay"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/raleway"
@@ -53,7 +55,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/bmicategorydispaly"
+            android:id="@+id/bmicategorydisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/genderDisplay"
@@ -63,7 +65,9 @@
             android:text="@string/your_bmi_category_is"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold">
+
+        </TextView>
 
     </RelativeLayout>
 
